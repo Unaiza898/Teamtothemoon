@@ -1,0 +1,19 @@
+.square {
+  height: 180px;
+  width: 290px;
+  background-color: white;
+  border-radius: 25px;
+  outline-style: solid; 
+  outline-width: -20pt; 
+}
+
+.text{
+  padding-top: 50px; 
+  margin-left: 180px; 
+  font-size: 25px;
+}
+
+.user_icon{ 
+  margin-left: -115pt; 
+  margin-top: -60pt;
+}
