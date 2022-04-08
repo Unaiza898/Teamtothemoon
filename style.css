@@ -46,7 +46,6 @@ a{
   }
 .navlink{
 float:right;
-border: 2px purple solid;
 font-family: Readex Pro;
 font-size: 35px;
 font-weight: 400;
@@ -75,7 +74,6 @@ overflow : hidden;
 }
 .slide
 {
-  border:solid green;
   height:100%;
   width:11.1%;
   float: left;/
@@ -114,7 +112,7 @@ letter-spacing: 0em;
 .tab{
   display:inline-block;
   justify-content: center;
-  border: green 2px solid;
+/*   border: green 2px solid; */
   width:200px;
   height:400px;
   margin-left: 3%;
