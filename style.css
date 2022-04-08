@@ -89,14 +89,12 @@ overflow : hidden;
     height: 100%;
 }
 @keyframes slideshow {
-  0%{margin-left: 0%;}
-      16.5%{margin-left:-100%;}
-      33%{margin-left: -100%;}
-      49.5%{margin-left: -200%}
-      67%{margin-left: -200%;}
-      83.5%{margin-left: -300%;}
-      99.9%{margin-left: -300%;}
-      100%{margin-left: 0%;}
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+    40%{margin-left: -100%}
+    60%{margin-left: -100%;}
+    80%{margin-left: -200%;}
+    100%{margin-left: -200%;}
 }
 .cont1{
 padding: 20px;
