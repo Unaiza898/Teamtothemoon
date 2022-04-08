@@ -8,6 +8,14 @@ body {
     min-height: 100vh;
 }
 
+header {
+    background-color: #D02E2E;
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+}
+
 .text-center {
     color: #fff;
     text-transform: uppercase;
@@ -23,8 +31,8 @@ body {
     top: 50%;
     transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.89);
-    border-radius: 3px;
-    padding: 70px 100px;
+    border-radius: 25px;
+    padding: 80px 70px;
 }
 
 .input-container {
@@ -61,13 +69,14 @@ body {
 .btn {
     border-radius: 25px;
     list-style-type: initial;
-    display: inline-block;
+    display: block;
     background-color: #D02E2E;
     border: 0;
     color: #fff;
     padding: 10px 20px;
     text-transform: uppercase;
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 10px;
     cursor: pointer;
     position: relative;
 }
@@ -83,3 +92,19 @@ body {
     top: -12px;
     font-size: 12px;
 }
+.signup{
+    margin-top: 10px;;
+color: white;
+}
+.box a { 
+color: white;
+ 
+  }
+  .box a:link { color: white; text-decoration: none; }
+  .box a:visited { color: white; text-decoration: none; }
+  .box a:hover { color: skyblue; text-decoration: underline; }
+
+  .policy{
+      color: white;
+      width: 200px;
+  }
