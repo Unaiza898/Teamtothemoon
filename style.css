@@ -1,0 +1,163 @@
+:root {
+  --color-bg: #d12d2d;
+  --color-bg-light: #ff6457;
+}
+
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+.navBar{
+position: relative;
+background-color:var(--color-bg);
+width:100%;
+height:120px;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+li{
+  float:left;
+}
+a{
+  text-decoration: none;
+  color:white;
+}
+
+.logo{
+   width:120px;
+   height:120px;
+   border-radius: 30px;
+   margin-left: 100px;
+   margin-right: 400px;
+   margin-top: auto;
+   margin-bottom: auto;
+   animation-name: fly;
+   animation-iteration-count: 3;
+   animation-duration: 5s;
+     position:absolute;
+}
+@keyframes fly{
+  from{transform:  scale(1.0);opacity:1.0;}
+  to{ transform:scale(0.5);opacity:0.5; }
+  }
+.navlink{
+float:right;
+font-family: Readex Pro;
+font-size: 35px;
+font-weight: 400;
+letter-spacing: 0em;
+margin-right: 80px;
+margin-top: 30px;
+}
+.navlink :hover {
+color:var(--color-bg-light);
+}
+
+.slideshow{
+width: 100%;
+height:450px;
+margin-left: auto;
+margin-right: auto;
+overflow : hidden;
+}
+.slide-wrapper{
+  width: 300%;
+  height:100%;
+  margin-right: auto;
+  margin-left: :auto;
+  animation:slideshow 20s infinite;
+
+}
+.slide
+{
+  height:100%;
+  width:11.1%;
+  float: left;/
+}
+.slideshow img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes slideshow {
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+    40%{margin-left: -100%}
+    60%{margin-left: -100%;}
+    80%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
+.cont1{
+padding: 20px;
+width:100%;
+height:200px;
+text-align: center;
+font-family: Recursive;
+font-size: 36px;
+font-weight: 400;
+line-height: 43px;
+letter-spacing: 0em;
+
+}
+.cont2{
+/*   border: green 2px solid; */
+  width:1500px;
+  height:400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tab{
+  display:inline-block;
+  justify-content: center;
+/*   border: green 2px solid; */
+  width:200px;
+  height:400px;
+  margin-left: 3%;
+  margin-right:3%;
+
+}
+.tab img{
+  width:100%;
+  height:50%;
+}
+.tab p{
+  font-family: Recursive;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.cont3{
+  margin-top:50px;
+  width:1500px;
+  height:150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+
+}
+.bookButton{
+  width: 300px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color:var(--color-bg);
+  border-radius: 20px;
+
+
+
+}
+.bookButton p{
+  font-family: Readex Pro sans-serif;
+font-size: 48px;
+font-weight: 400;
+line-height: 60px;
+letter-spacing: 0em;
+color: white;
+  text-align: center;
+
+}
