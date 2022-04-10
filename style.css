@@ -47,7 +47,7 @@ a{
 .navlink{
 float:right;
 font-family: Readex Pro;
-font-size: 35px;
+font-size: 18px;
 font-weight: 400;
 letter-spacing: 0em;
 margin-right: 80px;
@@ -68,15 +68,15 @@ overflow : hidden;
   width: 300%;
   height:100%;
   margin-right: auto;
-  margin-left: :auto;
+  margin-left:auto;
   animation:slideshow 20s infinite;
 
 }
 .slide
 {
-  height:100%;
-  width:11.1%;
-  float: left;/
+  height:50%;
+  width:100%;
+  float: left;
 }
 .slideshow img{
     width: 100%;
@@ -91,59 +91,90 @@ overflow : hidden;
     100%{margin-left: -200%;}
 }
 .cont1{
-padding: 20px;
+/* padding: 20px; */
 width:100%;
-height:200px;
+height:100px;
 text-align: center;
-font-family: Recursive;
-font-size: 36px;
-font-weight: 400;
-line-height: 43px;
-letter-spacing: 0em;
 
+font-size: 25px;
+font-weight: 530;
+line-height: 30px;
+letter-spacing: 0em;
+margin-top: 40px;
+}
+.tab{
+  float: left;
+  margin-right: 70px;
+   margin-top: 20px;
+}
+.tab :last-child{
+  margin-right: 0;
 }
 .cont2{
-/*   border: green 2px solid; */
-  width:1500px;
-  height:400px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 300px;
+  width: 1000px;
+  border-radius: 25px;
+  /* border: 2px solid #000000; */
+        float: left;
+        margin-left: 200px;
+       
+
 }
+
+.text1{
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 18px;
+  width: 90px;;
+   font-weight: bold;
+
+}
+/* 
 .tab{
   display:inline-block;
   justify-content: center;
-/*   border: green 2px solid; */
-  width:200px;
-  height:400px;
-  margin-left: 3%;
-  margin-right:3%;
 
-}
-.tab img{
-  width:100%;
+  width:150px;
+  height:400px;
+  margin-left: 10px;
+
+} */
+/* .tab img{
+  width:50%;
   height:50%;
 }
-.tab p{
-  font-family: Recursive;
-  font-size: 36px;
+.para{
+  font-size: 16px;
   font-weight: 700;
-  line-height: 43px;
-  letter-spacing: 0em;
-  text-align: left;
+  line-height: 16px;
+  margin-bottom: 10px;;
+  margin-top: 5px;;
+  width: 90px;;
 }
+.tab p{
+  width: 80px;;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+
+  text-align: left;
+} */
 .cont3{
   margin-top:50px;
-  width:1500px;
-  height:150px;
+  width:1000px;
+  /* height:150px; */
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: center;
+  position: relative;
+  /* height: 500px; */
+  margin-bottom: 100px;;
 
 }
 .bookButton{
-  width: 300px;
-  margin-left: 100px;
+  width: 100px;
+  /* margin-left: 100px; */
   margin-right: 100px;
   background-color:var(--color-bg);
   border-radius: 20px;
@@ -153,7 +184,7 @@ letter-spacing: 0em;
 }
 .bookButton p{
   font-family: Readex Pro sans-serif;
-font-size: 48px;
+font-size: 16px;
 font-weight: 400;
 line-height: 60px;
 letter-spacing: 0em;
