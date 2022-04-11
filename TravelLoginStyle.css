@@ -35,6 +35,9 @@ header {
     padding: 80px 70px;
 }
 
+.boxtop{
+    margin-top: 20px;;
+}
 .input-container {
     position: relative;
     margin-bottom: 25px;
@@ -108,3 +111,56 @@ color: white;
       color: white;
       width: 200px;
   }
+
+
+
+  
+#main-holder {
+    width: 50%;
+    height: 70%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  }
+  
+  /* -------------------------------------------------------------- */
+  
+  #login-header {}
+  
+  /* -------------------------------------------------------------- */
+  
+  /* Middle row of the main grid (contains the error message) */
+  
+  #login-error-msg-holder {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  /* Error message. By default it's transparent, but the opacity is controlled
+  by JavaScript */
+  
+  #login-error-msg {
+    width: 23%;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8a0000;
+    border: 1px solid #8a0000;
+    background-color: #e58f8f;
+    opacity: 0;
+  }
+  
+  #error-msg-second-line {
+    display: block;
+  }
+  
+  /* -------------------------------------------------------------- */
+  

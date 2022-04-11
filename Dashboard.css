@@ -171,3 +171,47 @@ float:left;
   background-color: #D02E2E;
  }
  
+ .search-bar{
+  height: 30px;
+  width: 820px;
+  border-radius: 25px;
+  border: 2px solid rgb(0, 0, 0);
+        float: left;
+        margin-left: -30px;
+        margin-top: -25px;
+margin-right: 50px;
+  position: absolute; 
+}
+
+.searchText{
+  padding-top: 260px; 
+  margin-left: 150px; 
+}
+
+.magnify{
+  margin-left: 758px;
+  margin-top: -19px; 
+}
+
+.filter{
+  height: 30px;
+  width: 100px;
+  border-radius: 25px;
+      float: left;
+        margin-left: -25px;
+        /* margin-top: -40px; */
+margin-right: 50px; 
+ position: absolute;  
+}
+
+  .filterText{
+    text-align: center;
+    height: 30px;
+  width: 100px;
+  padding-top: 5px;
+  border-radius: 25px;
+  margin-left: 990px; 
+  margin-top: -40px;
+  background: #D02E2E;
+  color: white;
+}  
