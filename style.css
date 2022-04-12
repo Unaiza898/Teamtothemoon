@@ -13,23 +13,28 @@
 position: relative;
 background-color:var(--color-bg);
 width:100%;
-height:120px;
+height:50px;
 list-style-type: none;
 margin: 0;
 padding: 0;
 overflow: hidden;
 }
-li{
-  float:left;
+
+.nav a {
+    display: block;
+    float: right;
+    height: 30px;
+    padding: 0 5px;
+    margin-left: 50px;
 }
-a{
-  text-decoration: none;
-  color:white;
-}
+.nav a:link { color: white; text-decoration: none; }
+.nav a:visited { color: white; text-decoration: none; }
+.nav a:hover { color:var(--color-bg-light) ; text-decoration: none; }
+
 
 .logo{
-   width:120px;
-   height:120px;
+   width:50px;
+   height:50px;
    border-radius: 30px;
    margin-left: 100px;
    margin-right: 400px;
@@ -44,38 +49,33 @@ a{
   from{transform:  scale(1.0);opacity:1.0;}
   to{ transform:scale(0.5);opacity:0.5; }
   }
-.navlink{
-float:right;
-font-family: Readex Pro;
-font-size: 18px;
-font-weight: 400;
-letter-spacing: 0em;
-margin-right: 80px;
-margin-top: 30px;
-}
-.navlink :hover {
+a :hover {
 color:var(--color-bg-light);
+text-decoration: none;
 }
 
 .slideshow{
+/*border:solid red;*/
 width: 100%;
-height:450px;
+height:350px;
 margin-left: auto;
 margin-right: auto;
 overflow : hidden;
 }
 .slide-wrapper{
+  /*border:solid yellow;*/
   width: 300%;
   height:100%;
   margin-right: auto;
-  margin-left:auto;
+  margin-left: :auto;
   animation:slideshow 20s infinite;
 
 }
 .slide
 {
-  height:50%;
-  width:100%;
+  border:solid white 1px;
+  height:100%;
+  width:11.1%;
   float: left;
 }
 .slideshow img{
@@ -83,7 +83,7 @@ overflow : hidden;
     height: 100%;
 }
 @keyframes slideshow {
-    0%{margin-left: 0%;}
+  0%{margin-left: 0%;}
     20%{margin-left: 0%;}
     40%{margin-left: -100%}
     60%{margin-left: -100%;}
@@ -103,21 +103,25 @@ letter-spacing: 0em;
 margin-top: 40px;
 }
 .tab{
+  display:block;
+  justify-content: center;
+  /* border: 2px solid #000000; */
   float: left;
-  margin-right: 70px;
-   margin-top: 20px;
+  margin-right: 20px;
+   margin-left: 20px;
 }
-.tab :last-child{
-  margin-right: 0;
-}
+
 .cont2{
-  height: 300px;
+  /* border: black solid 2px; */
+  display: flex;
+  justify-content: center;
+  height: 200px;
   width: 1000px;
   border-radius: 25px;
-  /* border: 2px solid #000000; */
-        float: left;
-        margin-left: 200px;
-       
+
+        margin-left: auto;
+        margin-right: auto;
+
 
 }
 
@@ -129,7 +133,7 @@ margin-top: 40px;
    font-weight: bold;
 
 }
-/* 
+/*
 .tab{
   display:inline-block;
   justify-content: center;
@@ -160,7 +164,8 @@ margin-top: 40px;
   text-align: left;
 } */
 .cont3{
-  margin-top:50px;
+  /* border: black solid 2px; */
+  margin-top:25px;
   width:1000px;
   /* height:150px; */
   margin-left: auto;
@@ -169,17 +174,18 @@ margin-top: 40px;
   justify-content: center;
   position: relative;
   /* height: 500px; */
-  margin-bottom: 100px;;
+  margin-bottom: 75px;;
+  font-weight: 400;
+  font-size: 18px;
+
 
 }
 .bookButton{
-  width: 100px;
-  /* margin-left: 100px; */
-  margin-right: 100px;
+  width: 110px;
+  margin-left: 50px;
+  margin-right: 50px;
   background-color:var(--color-bg);
   border-radius: 20px;
-
-
 
 }
 .bookButton p{
@@ -190,5 +196,25 @@ line-height: 60px;
 letter-spacing: 0em;
 color: white;
   text-align: center;
+}
+footer {
 
+ position: absolute;
+  position:fixed;
+}
+
+.copyright{
+position: absolute;
+bottom:0;
+  background-color:var(--color-bg);
+  color:white;
+  text-align: center;
+  left: 150px;
+  right: 150px;
+  bottom: 5px;
+}
+.socialmedia{
+  /* border: black solid 2px; */
+  display: flex;
+  justify-content:left;
 }
