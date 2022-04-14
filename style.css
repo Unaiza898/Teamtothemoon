@@ -74,8 +74,9 @@ overflow : hidden;
 }
 .slide
 {
-  height:50%;
-  width:100%;
+  border:solid green;
+  height:100%;
+  width:11.1%;
   float: left;
 }
 .slideshow img{
