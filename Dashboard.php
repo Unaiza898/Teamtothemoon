@@ -1,73 +1,89 @@
+
+<?php
+// Initialize the session
+session_start();
+include 'functions.php';
+$pdo = pdo_connect_mysql();
+
+$stmt = $pdo->prepare('SELECT * FROM tours ORDER BY date_added DESC LIMIT 4');
+$stmt->execute();
+$recently_added_tours = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: Travellogin.php");
+    exit;
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Dashboard</title>
     <script src="https://kit.fontawesome.com/e22c065292.js" crossorigin="anonymous"></script>
     <link href="Dashboard.css" rel="stylesheet" type="text/css" />
+  
+    <!-- <link href="tour.css" rel="stylesheet" type="text/css" /> -->
   </head>
 
   <body>
     <div class="main-container">
       <div class="nav">
         <div class="menu">
-          <img src = "logo.jpg" width="50" height="50">
+          <img src = "logo.jpg" width="60" height="60">
 
           <!-- <h3>LOGO</h3> -->
-          <a href="index.html"> Logout</a>
-          <a href="#"> Account</a>
+          <!-- <a href="index.html"> Logout</a> -->
+          <a href="logout.php" >logout</a>
+          <a href="#"> cart</a>
+          <!-- <i class="fas fa-shopping-cart"></i> -->
         </div>
       </div>
+
+      
       <div class="square">
         <div class="text">
           Welcome,
           <br />
-          admin
+         <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>
           <div class="user_icon">
-            <img src="icons8-user-100.png" width="120" height="120" />
+            <img src="images/icons8-user-100.png" width="120" height="120" />
           </div>
         </div>
       </div>
 
       <div class="rectangle">
         <div class="_">
-          <img src="setting.png" width="120px" height="120px" />
+          <img src="images/setting.png" width="120px" height="120px" />
           <div class="icon">Manage order</div>
         </div>
         <div class="_">
           <img
             class="flight"
-            src="search-flight.png"
+            src="images/search-flight.png"
             width="100px"
             height="100px"
           />
           <div class="icon">Search flight</div>
         </div>
         <div class="_">
-          <img src="icons8-tour-96.png" width="130px" height="140px" />
+          <img src="images/icons8-tour-96.png" width="130px" height="140px" />
           <div class="tour">Book tours</div>
         </div>
         <div class="_ ">
-          <img src="icons8-hotel-96.png" width="120px" height="120px" />
+          <img src="images/icons8-hotel-96.png" width="120px" height="120px" />
           <div class="icon">Book hotels</div>
         </div>
       </div>
-      <!-- <div class = searchText>
-        Search for flights and tours
-        <div class = search-bar></div>
-        <div class = magnify>
-          <img src="search.png" width="20" height="20">
-        </div>
-      </div>
 
-      <div class = filterText>
-        Filter
-        <div class = filter></div>
-      </div> -->
       <div class = searchText>
         Search for flights and tours
         <div class = search-bar></div>
         <div class = magnify>
-          <img src="search.png" width="20" height="20">
+          <img src="images/search.png" width="20" height="20">
         </div>
       </div>
 
@@ -77,44 +93,35 @@
       </div>
 
 
-
-
       <div class="container">
-        <div class="box">
-          <img
-            src="Seychelles_GettyImages-1169388113.webp"
-            width="250"
-            height="200"
-          />
-          <div>Seychelles Beach</div>
-        </div>
-        <div class="box">
-          <img src="swizlerland.png" width="250" height="200" />
 
-          <div>Swiss Alps</div>
-        </div>
-        <div class="box">
-          <img src="jh.jpg" width="250" height="200" />
-          <div>Jackson Hole</div>
-        </div>
+   
+    <div class="box">
+        <?php foreach ($recently_added_tours as $tours): ?>
+        <a href="routing.php?page=routes&id=<?=$tours['id']?>" class="product">
+            <img class = "image"src="<?=$tours['img']?>" width="150" height="100" alt="<?=$tours['name']?>">
+            <div class="tname"><?=$tours['name']?></div>
+            <span class="price">
+                <!-- &dollar;<?=$tours['price']?> -->
+                
+                <p><button>Add to Cart</button></p>
+                <?php if ($tours['rrp'] > 0): ?>
+                  <span class="rrp">&dollar;<?=$tours['rrp']?></span>
+                <?php endif; ?>
+            </span>
+        </a>
+        <?php endforeach; ?>
+    
+    </div>
 
-        <div class="box">
-          <img src="minnapolis.png" width="250" height="200" />
-          <div>Minneapolis</div>
-        </div>
-        <div class="box">
-          <img src="Bora-Bora.jpg" width="250" height="200" />
-          <div>Bora Bora</div>
-        </div>
+   
+</div>
 
-        <div class="box">
-          <img src="hunaya-pichu-.jpg" width="250" height="200" />
-          <div>Machu Picchu</div>
-        </div>
-      </div>
-      <footer>
 
-        <div class="content">
+
+ <footer>
+
+      <div class="content">
           <a href="#"> Customer service </a>
           <a href="#"> FAQ </a>
         </div>
@@ -143,6 +150,7 @@
           <p><small>&copy; Copyright 2022, TeamToTheMoon. All rights reserved. <br>NOTE: All information and materials used only for educational purposes.</small></p>
         </div>
       </footer>
-    </div>
+               </div>
+
   </body>
 </html>
