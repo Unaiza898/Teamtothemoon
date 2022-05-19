@@ -177,16 +177,19 @@ overflow: hidden;
         margin-top: -25px;
 margin-right: 50px;
   position: absolute;
+  display: flex;
 }
 
 .searchText{
   padding-top: 260px;
   margin-left: 150px;
+  display: flex;
 }
 
 .magnify{
   margin-left: 758px;
   margin-top: -19px;
+  display: flex;
 }
 
 .filter{
@@ -198,6 +201,7 @@ margin-right: 50px;
         /* margin-top: -40px; */
 margin-right: 50px;
  position: absolute;
+ display: flex;
 }
 
   .filterText{
@@ -210,6 +214,7 @@ margin-right: 50px;
   margin-top: -40px;
   background: #D02E2E;
   color: white;
+  display: flex;
 }
 .copyright{
 position: absolute;

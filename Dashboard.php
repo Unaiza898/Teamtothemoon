@@ -33,7 +33,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div class="main-container">
       <div class="nav">
         <div class="menu">
-          <img src = "logo.png" width="60" height="60">
+          <img src = "logo.jpg" width="49" height="49">
 
           <!-- <h3>LOGO</h3> -->
           <!-- <a href="index.html"> Logout</a> -->
