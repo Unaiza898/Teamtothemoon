@@ -16,7 +16,7 @@
     <div class="nav">
       <div class="menu">
         <ul class="navBar">
-         <li><img src="logo.jpg" alt="Team to the moon logo" class="logo"></li>
+         <li><img src="logo.png" alt="Team to the moon logo" class="logo"></li>
          <li class="navlink"><a  href="TravelSignUp.php">Register</a></li>
          <li class="navlink">  <a  href="TravelLogin.php">Login</a></li>
          </ul>
