@@ -38,7 +38,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <!-- <h3>LOGO</h3> -->
           <!-- <a href="index.html"> Logout</a> -->
           <a href="logout.php" >logout</a>
-          <a href="#"> cart</a>
+          <a href="cart.html"> cart</a>
           <!-- <i class="fas fa-shopping-cart"></i> -->
         </div>
       </div>
